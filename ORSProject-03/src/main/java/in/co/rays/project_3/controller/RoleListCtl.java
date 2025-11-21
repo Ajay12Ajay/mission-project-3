@@ -21,6 +21,7 @@ import in.co.rays.project_3.util.ServletUtility;
 
 /**
  * role list functionality controller. to show list and search of role operation
+ * 
  * @author Ajay Pratap Kerketta
  *
  */
@@ -32,24 +33,22 @@ public class RoleListCtl extends BaseCtl {
 	private static final long serialVersionUID = 1L;
 	private static Logger log = Logger.getLogger(RoleListCtl.class);
 
-	
 	protected void preload(HttpServletRequest request) {
-		RoleModelInt model=ModelFactory.getInstance().getRoleModel();
+		RoleModelInt model = ModelFactory.getInstance().getRoleModel();
 		try {
-			List list=model.list();
+			List list = model.list();
 			request.setAttribute("roleList", list);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
 	}
-	
+
 	@Override
 	protected BaseDTO populateDTO(HttpServletRequest request) {
 		RoleDTO dto = new RoleDTO();
 		dto.setId(DataUtility.getLong(request.getParameter("roleId")));
-		populateBean(dto,request);
-		//bean.setName(DataUtility.getString(request.getParameter("name")));
-      
+		populateBean(dto, request);
+
 		return dto;
 	}
 
@@ -62,10 +61,10 @@ public class RoleListCtl extends BaseCtl {
 		log.debug("RoleListCtl doGet Start");
 		List list = null;
 		List next = null;
-		
+
 		int pageNo = 1;
 		int pageSize = DataUtility.getInt(PropertyReader.getValue("page.size"));
-		
+
 		RoleDTO dto = (RoleDTO) populateDTO(request);
 		String op = DataUtility.getString(request.getParameter("operation"));
 		RoleModelInt model = ModelFactory.getInstance().getRoleModel();
@@ -154,7 +153,7 @@ public class RoleListCtl extends BaseCtl {
 			if (list == null || list.size() == 0) {
 				ServletUtility.setErrorMessage("No record found ", request);
 			}
-			if (next == null || next.size() == 0&&!OP_DELETE.equalsIgnoreCase(op)) {
+			if (next == null || next.size() == 0 && !OP_DELETE.equalsIgnoreCase(op)) {
 				request.setAttribute("nextListSize", 0);
 
 			} else {
@@ -180,4 +179,3 @@ public class RoleListCtl extends BaseCtl {
 	}
 
 }
-

@@ -95,8 +95,6 @@ public class RoleCtl extends BaseCtl {
 		if (OP_SAVE.equalsIgnoreCase(op) || OP_UPDATE.equalsIgnoreCase(op)) {
 
 			RoleDTO dto = (RoleDTO) populateDTO(request);
-			System.out.println("kkkkkkkkkkkk"+dto);
-          //  System.out.println("kkkkk"+dto.getName()+"sdf"+dto.getDescription());
 			try {
 				if (id > 0) {
 					model.update(dto);

@@ -71,7 +71,7 @@ public abstract class BaseCtl extends HttpServlet{
 
     protected BaseDTO populateBean(BaseDTO dto,HttpServletRequest request){
 
-    	System.out.println("populateDTO method in BaseCtl");
+    	
 
     	String createdBy=request.getParameter("createdBy");
     	String modifiedBy=null;

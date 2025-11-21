@@ -20,7 +20,8 @@ import in.co.rays.project_3.util.PropertyReader;
 import in.co.rays.project_3.util.ServletUtility;
 
 /**
- * get marksheet functionality ctl.to perform  get marksheet opeation
+ * get marksheet functionality ctl.to perform get marksheet opeation
+ * 
  * @author Ajay Pratap Kerketta
  *
  */
@@ -54,28 +55,30 @@ public class GetMarksheetCtl extends BaseCtl {
 		dto.setChemistry(DataUtility.getInt(request.getParameter("chemistry")));
 
 		dto.setMaths(DataUtility.getInt(request.getParameter("maths")));
-		populateBean(dto,request);
-		
+		populateBean(dto, request);
+
 		return dto;
 	}
-	 /**
-     * Concept of Display method
-     *
-     */
+
+	/**
+	 * Concept of Display method
+	 *
+	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
 		log.debug("marksheet ctl do get start");
 		ServletUtility.forward(getView(), request, response);
 		log.debug("marksheet ctl do get end");
 	}
-	 /**
-     * Concept of submit method
-     *
-     */
+
+	/**
+	 * Concept of submit method
+	 *
+	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
 		log.debug("marksheet ctl do post start");
-		System.out.println("get marksheet do post <><>>");
+
 		String op = DataUtility.getString(request.getParameter("operation"));
 		long id = DataUtility.getLong(request.getParameter("id"));
 		MarksheetModelInt model = ModelFactory.getInstance().getMarksheetModel();
@@ -106,4 +109,3 @@ public class GetMarksheetCtl extends BaseCtl {
 	}
 
 }
-

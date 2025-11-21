@@ -26,6 +26,7 @@ import in.co.rays.project_3.util.ServletUtility;
 
 /**
  * user functionality controller.to perform add,delete and update operation
+ * 
  * @author Ajay Pratap Kerketta
  *
  */
@@ -42,14 +43,14 @@ public class UserCtl extends BaseCtl {
 		try {
 			List list = model.list();
 			Iterator it = list.iterator();
-			while(it.hasNext()) {
-				RoleDTO dto=(RoleDTO) it.next();
+			while (it.hasNext()) {
+				RoleDTO dto = (RoleDTO) it.next();
 				System.out.println(dto.getId());
 				System.out.println(dto.getName());
 				System.out.println(dto.getDescription());
-				
+
 			}
-			
+
 			request.setAttribute("roleList", list);
 
 		} catch (Exception e) {
@@ -60,9 +61,7 @@ public class UserCtl extends BaseCtl {
 
 	protected boolean validate(HttpServletRequest request) {
 		boolean pass = true;
-		System.out.println("-------------validate started-------------");
-		
-		
+
 		if (DataValidator.isNull(request.getParameter("firstName"))) {
 			request.setAttribute("firstName", PropertyReader.getValue("error.require", "first Name"));
 			pass = false;
@@ -119,40 +118,28 @@ public class UserCtl extends BaseCtl {
 		if (DataValidator.isNull(request.getParameter("dob"))) {
 			request.setAttribute("dob", PropertyReader.getValue("error.require", "dob"));
 			pass = false;
-		}else if (!DataValidator.isDate(request.getParameter("dob"))) {
+		} else if (!DataValidator.isDate(request.getParameter("dob"))) {
 			request.setAttribute("dob", PropertyReader.getValue("error.date", "Date Of Birth"));
 			pass = false;
-		}else if (!DataValidator.isAge(request.getParameter("dob"))) {
-			
+		} else if (!DataValidator.isAge(request.getParameter("dob"))) {
+
 			request.setAttribute("dob", "Age Must be greater then 18 year");
 			pass = false;
 		}
-		
+
 		if (!request.getParameter("password").equals(request.getParameter("confirmPassword"))
 				&& !"".equals(request.getParameter("confirmPassword"))) {
-			
-			request.setAttribute("confirmPassword","Confirm  Password  should  be matched.");
+
+			request.setAttribute("confirmPassword", "Confirm  Password  should  be matched.");
 			pass = false;
 		}
-		System.out.println(request.getParameter("dob"));
-		System.out.println("validate end " + pass+"................"+request.getParameter("id"));
-		System.out.println(request.getParameter("password"));
-		System.out.println(request.getParameter("confirmPassword"));
 		return pass;
 
 	}
 
 	protected BaseDTO populateDTO(HttpServletRequest request) {
 		UserDTO dto = new UserDTO();
-		
-         
-         System.out.println(request.getParameter("dob"));
- 		System.out.println("Populate end " + "................"+request.getParameter("id"));
- 		System.out.println("-------------------------------------------"+request.getParameter("password"));
- 		System.out.println(request.getParameter("confirmPassword"));
-         
-          
-   
+
 		dto.setId(DataUtility.getLong(request.getParameter("id")));
 
 		dto.setRoleId(DataUtility.getLong(request.getParameter("role")));
@@ -169,10 +156,9 @@ public class UserCtl extends BaseCtl {
 
 		dto.setGender(DataUtility.getString(request.getParameter("gender")));
 		dto.setMobileNo(DataUtility.getString(request.getParameter("mobileNo")));
-        
-		populateBean(dto,request);
-		
-		 System.out.println(request.getParameter("dob")+"......."+dto.getDob());
+
+		populateBean(dto, request);
+
 		log.debug("UserRegistrationCtl Method populatedto Ended");
 
 		return dto;
@@ -188,7 +174,7 @@ public class UserCtl extends BaseCtl {
 		long id = DataUtility.getLong(request.getParameter("id"));
 		if (id > 0 || op != null) {
 			System.out.println("in id > 0  condition");
-			UserDTO dto=null;
+			UserDTO dto = null;
 			try {
 				dto = model.findByPK(id);
 				ServletUtility.setDto(dto, request);
@@ -202,23 +188,22 @@ public class UserCtl extends BaseCtl {
 		ServletUtility.forward(getView(), request, response);
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws IOException, ServletException {
 		String op = DataUtility.getString(request.getParameter("operation"));
-		System.out.println("-------------------------------------------------------------------------dopost run-------");
 		// get model
 		UserModelInt model = ModelFactory.getInstance().getUserModel();
 		long id = DataUtility.getLong(request.getParameter("id"));
-		if (OP_SAVE.equalsIgnoreCase(op)||OP_UPDATE.equalsIgnoreCase(op)) {
+		if (OP_SAVE.equalsIgnoreCase(op) || OP_UPDATE.equalsIgnoreCase(op)) {
 			UserDTO dto = (UserDTO) populateDTO(request);
-              System.out.println(" in do post method jkjjkjk++++++++"+dto.getId());
 			try {
 				if (id > 0) {
 					model.update(dto);
 					ServletUtility.setSuccessMessage("Data is successfully Updated", request);
 				} else {
-					
+
 					try {
-						 model.add(dto);
+						model.add(dto);
 						ServletUtility.setSuccessMessage("Data is successfully saved", request);
 					} catch (ApplicationException e) {
 						log.error(e);
@@ -231,7 +216,7 @@ public class UserCtl extends BaseCtl {
 
 				}
 				ServletUtility.setDto(dto, request);
-				
+
 			} catch (ApplicationException e) {
 				log.error(e);
 				ServletUtility.handleException(e, request, response);

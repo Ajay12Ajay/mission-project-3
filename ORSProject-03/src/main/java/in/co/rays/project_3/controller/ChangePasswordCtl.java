@@ -31,7 +31,7 @@ public class ChangePasswordCtl extends BaseCtl {
 	private static Logger log = Logger.getLogger(ChangePasswordCtl.class);
 
 	protected boolean validate(HttpServletRequest request) {
-		System.out.println("validate.......");
+		
 		log.debug("change password validate method start");
 		boolean pass = true;
 		String op = request.getParameter("operation");
@@ -77,7 +77,7 @@ public class ChangePasswordCtl extends BaseCtl {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
-		System.out.println("do get ............");
+		
 		ServletUtility.forward(getView(), request, response);
 
 	}
@@ -96,8 +96,7 @@ public class ChangePasswordCtl extends BaseCtl {
 		String newPassword = request.getParameter("newpassword");
 		String oldPassword = request.getParameter("oldpassword");
 		long id = UserBean.getId();
-		System.out.println("do post id..." + id + "...." + UserBean.getPassword() + ";;;;;;;;;" + UserBean.getId()
-				+ "....." + newPassword + "...." + oldPassword);
+	
 		if (OP_SAVE.equalsIgnoreCase(op)) {
 			try {
 				boolean flag = model.changePassword(id, newPassword, oldPassword);
@@ -121,7 +120,7 @@ public class ChangePasswordCtl extends BaseCtl {
 			return;
 		}
 
-		ServletUtility.forward(getView() ,request, response);
+		ServletUtility.forward(getView(), request, response);
 		log.debug("ChangePasswordCtl Method doGet Ended");
 
 	}

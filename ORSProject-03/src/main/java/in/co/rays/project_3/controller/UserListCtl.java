@@ -68,12 +68,10 @@ public class UserListCtl extends BaseCtl {
 		List next;
 		int pageNo = 1;
 		int pageSize = DataUtility.getInt(PropertyReader.getValue("page.size"));
-		System.out.println("==========" + pageSize);
 		UserDTO dto = (UserDTO) populateDTO(request);
 		// get the selected checkbox ids array for delete list
 		UserModelInt model = ModelFactory.getInstance().getUserModel();
 		try {
-			System.out.println("in ctllllllllll search");
 			list = model.search(dto, pageNo, pageSize);
 
 			ArrayList<UserDTO> a = (ArrayList<UserDTO>) list;
@@ -82,8 +80,6 @@ public class UserListCtl extends BaseCtl {
 				System.out.println(udto1.getRoleId() + "[[[[[[[[[[[--------------------");
 			}
 
-			System.out.println(list + "----------------------------------------------------------");
-			System.out.println(list.indexOf(3));
 			next = model.search(dto, pageNo + 1, pageSize);
 			ServletUtility.setList(list, request);
 			if (list == null || list.size() == 0) {
@@ -168,7 +164,6 @@ public class UserListCtl extends BaseCtl {
 				return;
 			}
 			dto = (UserDTO) populateDTO(request);
-			System.out.println("y yyyyyyyyyy" + dto.getRoleId());
 
 			list = model.search(dto, pageNo, pageSize);
 

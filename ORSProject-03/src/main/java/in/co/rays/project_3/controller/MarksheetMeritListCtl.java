@@ -20,7 +20,8 @@ import in.co.rays.project_3.util.PropertyReader;
 import in.co.rays.project_3.util.ServletUtility;
 
 /**
- *  marksheetmerit list functionlity controller to show merit list student
+ * marksheetmerit list functionlity controller to show merit list student
+ * 
  * @author Ajay Pratap Kerketta
  *
  */
@@ -33,22 +34,23 @@ public class MarksheetMeritListCtl extends BaseCtl {
 		MarksheetDTO dto = new MarksheetDTO();
 		return dto;
 
-	} 
+	}
+
 	/**
-     * Contains Display logics
-     */
+	 * Contains Display logics
+	 */
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
 		log.debug("Marksheet merit list do get  start");
-		System.out.println("Inside merit list get");
+
 		List list;
 		int pageNo = 1;
 		int pageSize = DataUtility.getInt(PropertyReader.getValue("page.size"));
 		String op = DataUtility.getString(request.getParameter("operation"));
 		long id = DataUtility.getLong(request.getParameter("id"));
 		MarksheetDTO dto = (MarksheetDTO) populateDTO(request);
-		MarksheetModelInt model =ModelFactory.getInstance().getMarksheetModel();
+		MarksheetModelInt model = ModelFactory.getInstance().getMarksheetModel();
 		try {
 			list = model.getMeritList(pageNo, pageSize);
 			ServletUtility.setList(list, request);
@@ -59,8 +61,7 @@ public class MarksheetMeritListCtl extends BaseCtl {
 			ServletUtility.setPageNo(pageNo, request);
 			ServletUtility.setPageSize(pageSize, request);
 			ServletUtility.forward(getView(), request, response);
-		} catch (Exception e) 
-		{
+		} catch (Exception e) {
 			log.error(e);
 			ServletUtility.handleException(e, request, response);
 			e.printStackTrace();
@@ -68,9 +69,10 @@ public class MarksheetMeritListCtl extends BaseCtl {
 		log.debug("Marksheet merit list do get  end");
 
 	}
+
 	/**
-     * Contains Submit logics
-     */
+	 * Contains Submit logics
+	 */
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
@@ -113,4 +115,3 @@ public class MarksheetMeritListCtl extends BaseCtl {
 	}
 
 }
-

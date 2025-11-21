@@ -60,11 +60,11 @@ public class ProductListCtl extends BaseCtl {
 		List next;
 		int pageNo = 1;
 		int pageSize = DataUtility.getInt(PropertyReader.getValue("page.size"));
-		System.out.println("==========" + pageSize);
+
 		ProductDTO dto = (ProductDTO) populateDTO(request);
 		ProductModelInt model = ModelFactory.getInstance().getProductModel();
 		try {
-			System.out.println("in ctllllllllll search");
+
 			list = model.search(dto, pageNo, pageSize);
 
 			next = model.search(dto, pageNo + 1, pageSize);
@@ -108,7 +108,6 @@ public class ProductListCtl extends BaseCtl {
 		pageSize = (pageSize == 0) ? DataUtility.getInt(PropertyReader.getValue("page.size")) : pageSize;
 		ProductDTO dto = (ProductDTO) populateDTO(request);
 		String op = DataUtility.getString(request.getParameter("operation"));
-		System.out.println("op---->" + op);
 
 		String[] ids = request.getParameterValues("ids");
 		ProductModelInt model = ModelFactory.getInstance().getProductModel();

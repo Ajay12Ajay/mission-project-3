@@ -51,16 +51,15 @@ public class ForgetPasswordCtl extends BaseCtl {
 		UserDTO dto = new UserDTO();
 		dto.setLogin(DataUtility.getString(request.getParameter("login")));
 		populateBean(dto, request);
-		System.out.println("Hello");
+
 		return dto;
-		
 
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
 		log.debug("do get method started");
-		System.out.println("forget password......doget");
+
 		ServletUtility.forward(getView(), request, response);
 	}
 
@@ -74,7 +73,7 @@ public class ForgetPasswordCtl extends BaseCtl {
 			try {
 				userModel.forgetPassword(dto.getLogin());
 				ServletUtility.setSuccessMessage("Password has been sent to your registered email id.", request);
-				
+
 			} catch (RecordNotFoundException e) {
 				ServletUtility.setErrorMessage(e.getMessage(), request);
 				log.error(e);

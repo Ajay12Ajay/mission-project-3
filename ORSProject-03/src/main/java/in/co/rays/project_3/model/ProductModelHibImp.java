@@ -70,10 +70,8 @@ public class ProductModelHibImp implements ProductModelInt {
 		try {
 			session = HibDataSource.getSession();
 			tx = session.beginTransaction();
-			System.out.println("before update");
 
 			session.saveOrUpdate(dto);
-			System.out.println("after update");
 			tx.commit();
 
 		} catch (HibernateException e) {
@@ -160,7 +158,6 @@ public class ProductModelHibImp implements ProductModelInt {
 
 	@Override
 	public ProductDTO findByPK(long pk) throws ApplicationException {
-		System.out.println("======" + pk + "----------------------------------");
 		Session session = null;
 		ProductDTO dto = null;
 		try {

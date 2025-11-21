@@ -41,7 +41,6 @@ public class MarksheetCtl extends BaseCtl {
 		try {
 			List li = model.list();
 			request.setAttribute("studenList", li);
-			System.out.println("add marksheet" + li);
 
 		} catch (Exception e) {
 			e.printStackTrace();
