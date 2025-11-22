@@ -109,7 +109,7 @@ public class LoginCtl extends BaseCtl {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
 		String op = request.getParameter("operation");
-		System.out.println(";;;" + op);
+		
 
 		HttpSession session = request.getSession(true);
 

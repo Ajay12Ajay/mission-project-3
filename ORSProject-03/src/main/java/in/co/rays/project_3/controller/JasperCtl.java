@@ -50,8 +50,7 @@ public class JasperCtl extends BaseCtl {
 				jasperFile = rb.getString("JASPER_REPORT");
 			}
 
-			JasperReport jasperReport = JasperCompileManager
-					.compileReport(jasperFile);
+			JasperReport jasperReport = JasperCompileManager.compileReport(jasperFile);
 
 			HttpSession session = request.getSession(true);
 			UserDTO dto = (UserDTO) session.getAttribute("user");
