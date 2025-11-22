@@ -45,9 +45,9 @@
 	<title>
 		<band height="120">
 			<staticText>
-				<reportElement x="0" y="40" width="550" height="30" uuid="bc5528ee-1bd1-4898-8cd3-5af2bde40c7a"/>
+				<reportElement x="0" y="40" width="550" height="60" uuid="bc5528ee-1bd1-4898-8cd3-5af2bde40c7a"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Consolas" size="25" isBold="true" isItalic="false"/>
+					<font fontName="SansSerif" size="25" isBold="true" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[MARKSHEET MERIT LIST]]></text>
 			</staticText>
@@ -153,9 +153,7 @@
 		<band height="132">
 			<staticText>
 				<reportElement x="128" y="40" width="298" height="30" uuid="079aadc3-52af-41f5-8106-d07382df9f04"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Consolas" size="18"/>
-				</textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[© Ajay Pratap Kerketta]]></text>
 			</staticText>
 			<line direction="BottomUp">
