@@ -158,10 +158,11 @@
 					%>
 					<tbody>
 						<tr>
-							<td align="center"><input type="checkbox" class="checkbox"
-												name="ids" value="<%=dto.getId()%>"
-												<%if (dto.getRoleId() == RoleDTO.ADMIN) {%> <%="disabled"%>
-								<%}%>></td>
+							<td align="center">
+							
+							<input type="checkbox" class="checkbox" name="ids" 
+							value="<%=dto.getId()%>" <%if (dto.getRoleId() == RoleDTO.ADMIN) {%> <%="disabled"%><%}%>></td>
+							
 							<td class="text"><%=index++%></td>
 							<td class="text"><%=dto.getFirstName()%></td>
 							<td class="text"><%=dto.getLastName()%></td>
@@ -169,6 +170,7 @@
 							<td class="text"><%=dto.getGender()%></td>
 							<td class="text"><%=rbean.getName()%></td>
 							<td class="text"><%=DataUtility.getDateString(dto.getDob())%></td>
+							
 							<td class="text">
 							  <a href="UserCtl?id=<%=dto.getId()%>"
 								 <%if (dto.getRoleId() == RoleDTO.ADMIN) {%>
@@ -185,8 +187,8 @@
 				<tr>
 					<td><input type="submit" name="operation"
 						class="btn btn-warning btn-md" style="font-size: 17px"
-						value="<%=UserListCtl.OP_PREVIOUS%>"
-						<%=pageNo > 1 ? "" : "disabled"%>></td>
+						value="<%=UserListCtl.OP_PREVIOUS%>" <%=pageNo > 1 ? "" : "disabled"%>></td>
+				
 					<td><input type="submit" name="operation"
 						class="btn btn-primary btn-md" style="font-size: 17px"
 						value="<%=UserListCtl.OP_NEW%>"></td>
@@ -196,8 +198,8 @@
 
 					<td align="right"><input type="submit" name="operation"
 						class="btn btn-warning btn-md" style="font-size: 17px"
-						style="padding: 5px;" value="<%=UserListCtl.OP_NEXT%>"
-						<%=(nextPageSize != 0) ? "" : "disabled"%>></td>
+						style="padding: 5px;" 
+						value="<%=UserListCtl.OP_NEXT%>" <%=(nextPageSize != 0) ? "" : "disabled"%>></td>
 				</tr>
 				<tr></tr>
 			</table>

@@ -159,7 +159,7 @@ i.css {
 							<div class="text-center">
 
 								<input type="submit" name="operation"
-									class="btn btn-success btn-md hover-overlayed"
+									class="btn btn-success btn-md "
 									style="font-size: 17px" value="<%=LoginCtl.OP_SIGN_IN%>">
 
 								<input type="submit" name="operation"

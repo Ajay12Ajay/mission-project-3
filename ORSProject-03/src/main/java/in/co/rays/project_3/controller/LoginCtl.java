@@ -134,7 +134,6 @@ public class LoginCtl extends BaseCtl {
 						ServletUtility.redirect(ORSView.WELCOME_CTL, request, response);
 						return;
 					} else {
-						System.out.println();
 						if (rdto.getId() == 1) {
 							ServletUtility.redirect(uri, request, response);
 						} else {
