@@ -75,7 +75,6 @@
 
                 <% if (userDto.getRoleId() == RoleDTO.STUDENT) { %>
 
-                    <!-- ✅ STUDENT MENU EXACTLY LIKE SCREENSHOT -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
                             <span style="color:white;">Marksheet</span>
@@ -106,7 +105,6 @@
 
                 <% } else if (userDto.getRoleId() == RoleDTO.ADMIN) { %>
 
-                    <!-- ✅ ADMIN MENU EXACTLY LIKE YOUR ORIGINAL -->
                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle"
                         href="#" data-toggle="dropdown" style="color:white;">User</a>
                         <div class="dropdown-menu">

@@ -77,7 +77,7 @@ public class UserListCtl extends BaseCtl {
 			ArrayList<UserDTO> a = (ArrayList<UserDTO>) list;
 
 			for (UserDTO udto1 : a) {
-				System.out.println(udto1.getRoleId() + "[[[[[[[[[[[--------------------");
+				System.out.println(udto1.getRoleId());
 			}
 
 			next = model.search(dto, pageNo + 1, pageSize);
