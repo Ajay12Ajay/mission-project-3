@@ -215,7 +215,7 @@ public class UserCtl extends BaseCtl {
 					}
 
 				}
-				ServletUtility.setDto(dto, request);
+			//	ServletUtility.setDto(dto, request);
 
 			} catch (ApplicationException e) {
 				log.error(e);

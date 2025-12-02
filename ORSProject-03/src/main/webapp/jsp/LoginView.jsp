@@ -159,11 +159,11 @@ i.css {
 							<div class="text-center">
 
 								<input type="submit" name="operation"
-									class="btn btn-success btn-md "
+									class="btn btn-success  "
 									style="font-size: 17px" value="<%=LoginCtl.OP_SIGN_IN%>">
 
 								<input type="submit" name="operation"
-									class="btn btn-primary btn-md" style="font-size: 17px"
+									class="btn btn-primary " style="font-size: 17px"
 									value="<%=UserRegistrationCtl.OP_SIGN_UP%>">
 							</div>
 							<div class="text-center">

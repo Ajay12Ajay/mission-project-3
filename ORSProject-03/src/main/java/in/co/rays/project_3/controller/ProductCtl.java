@@ -111,7 +111,7 @@ public class ProductCtl extends BaseCtl {
 					model.add(dto);
 					ServletUtility.setSuccessMessage("Record Successfully Saved", request);
 				}
-				ServletUtility.setDto(dto, request);
+			//	ServletUtility.setDto(dto, request);
 			} catch (ApplicationException e) {
 				e.printStackTrace();
 				log.error(e);

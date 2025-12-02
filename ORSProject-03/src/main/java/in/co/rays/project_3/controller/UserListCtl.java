@@ -122,7 +122,6 @@ public class UserListCtl extends BaseCtl {
 		pageSize = (pageSize == 0) ? DataUtility.getInt(PropertyReader.getValue("page.size")) : pageSize;
 		UserDTO dto = (UserDTO) populateDTO(request);
 		String op = DataUtility.getString(request.getParameter("operation"));
-		System.out.println("op---->" + op);
 
 // get the selected checkbox ids array for delete list
 		String[] ids = request.getParameterValues("ids");

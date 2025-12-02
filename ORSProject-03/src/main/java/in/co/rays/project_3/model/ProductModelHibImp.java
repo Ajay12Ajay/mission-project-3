@@ -128,18 +128,21 @@ public class ProductModelHibImp implements ProductModelInt {
 		try {
 			session = HibDataSource.getSession();
 			Criteria criteria = session.createCriteria(ProductDTO.class);
-			if (dto.getId() != null && dto.getId() > 0) {
-				criteria.add(Restrictions.eq("id", dto.getId()));
+			if (dto != null) {
+				if (dto.getId() != null && dto.getId() > 0) {
+					criteria.add(Restrictions.eq("id", dto.getId()));
 
-			}
-			if (dto.getProductName() != null && dto.getProductName().length() > 0) {
-				criteria.add(Restrictions.like("productName", dto.getProductName() + "%"));
-			}
-			if (dto.getProductCategory() != null && dto.getProductCategory().length() > 0) {
-				criteria.add(Restrictions.like("productCategory", dto.getProductCategory() + "%"));
-			}
-			if (dto.getProductAmmount() != null && dto.getProductAmmount().length() > 0) {
-				criteria.add(Restrictions.like("productAmmount", dto.getProductAmmount() + "%"));
+				}
+				if (dto.getProductName() != null && dto.getProductName().length() > 0) {
+					criteria.add(Restrictions.like("productName", dto.getProductName() + "%"));
+				}
+				if (dto.getProductCategory() != null && dto.getProductCategory().length() > 0) {
+					criteria.add(Restrictions.like("productCategory", dto.getProductCategory() + "%"));
+				}
+				if (dto.getProductAmmount() != null && dto.getProductAmmount().length() > 0) {
+					criteria.add(Restrictions.like("productAmmount", dto.getProductAmmount() + "%"));
+				}
+
 			}
 			if (pageSize > 0) {
 				criteria.setFirstResult((pageNo - 1) * pageSize);

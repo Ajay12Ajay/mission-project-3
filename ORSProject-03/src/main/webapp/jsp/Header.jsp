@@ -23,7 +23,7 @@
     background-image: linear-gradient(to bottom right, grey);
 }
 
-/* Student alignment fix ONLY */
+
 .student-nav-fix .navbar-nav {
     align-items: center !important;
 }

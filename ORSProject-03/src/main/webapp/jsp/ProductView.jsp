@@ -164,7 +164,7 @@ i.css {
 												<i class="fa fa-calendar grey-text" style="font-size: 1rem;"></i>
 											</div>
 										</div>
-										<input type="text" id="datepicker2" name="purchaseDate"
+										<input type="text" id="datepicker3" name="purchaseDate"
 											class="form-control" placeholder="PurchaseDate"
 											readonly="readonly"
 											value="<%=DataUtility.getDateString(dto.getPurchaseDate())%>">
@@ -174,7 +174,7 @@ i.css {
 							</div>
 							</br>
 							<%
-								if (id > 0) {
+								if (dto.getId() != null && dto.getId() > 0) {
 							%>
 							<div class="text-center">
 
