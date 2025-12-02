@@ -38,6 +38,9 @@ public class ProductCtl extends BaseCtl {
 		if (DataValidator.isNull(request.getParameter("productAmmount"))) {
 			request.setAttribute("productAmmount", PropertyReader.getValue("error.require", "productAmmount"));
 			pass = false;
+		} else if (!DataValidator.isInteger(request.getParameter("productAmmount"))) {
+			request.setAttribute("productAmmount", "productAmmount must contain integers only");
+			pass = false;
 		}
 		if (DataValidator.isNull(request.getParameter("purchaseDate"))) {
 			request.setAttribute("purchaseDate", PropertyReader.getValue("error.require", "purchaseDate"));

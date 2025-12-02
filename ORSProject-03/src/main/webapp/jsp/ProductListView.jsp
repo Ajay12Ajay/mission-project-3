@@ -103,31 +103,29 @@
 				<div class="col-md-4"></div>
 			</div>
 
-			<div class="row">
+			<div class="row justify-content-center mt-3">
 
-				<div class="col-sm-2"></div>
-				<div class="col-sm-2">
-					<input type="text" name="productName"
-						placeholder="Enter productName" class="form-control"
-						value="<%=ServletUtility.getParameter("productName", request)%>">
-				</div>
-				&emsp;
-				<div class="col-sm-2">
-					<input type="text" name="productAmmount"
-						placeholder="Enter productAmmount" class="form-control"
-						value="<%=ServletUtility.getParameter("productAmmount", request)%>">
-				</div>
-				&emsp;
+    <div class="col-md-2">
+        <input type="text" name="productName"
+            placeholder="Enter productName" class="form-control"
+            value="<%=ServletUtility.getParameter("productName", request)%>">
+    </div>
 
-				<div class="col-sm-2">
-					<input type="submit" class="btn btn-primary btn-md"
-						style="font-size: 15px" name="operation"
-						value="<%=ProductListCtl.OP_SEARCH%>">&emsp; <input
-						type="submit" class="btn btn-dark btn-md" style="font-size: 15px"
-						name="operation" value="<%=ProductListCtl.OP_RESET%>">
-				</div>
-				<div class="col-sm-1"></div>
-			</div>
+    <div class="col-md-2">
+        <input type="text" name="productAmmount"
+            placeholder="Enter productAmmount" class="form-control"
+            value="<%=ServletUtility.getParameter("productAmmount", request)%>">
+    </div>
+
+    <div class="col-md-3 text-center">
+        <input type="submit" class="btn btn-primary btn-md"
+            name="operation" value="<%=ProductListCtl.OP_SEARCH%>">&emsp;
+
+        <input type="submit" class="btn btn-dark btn-md"
+            name="operation" value="<%=ProductListCtl.OP_RESET%>">
+    </div>
+
+</div>
 
 			</br>
 			<div style="margin-bottom: 20px;" class="table-responsive">

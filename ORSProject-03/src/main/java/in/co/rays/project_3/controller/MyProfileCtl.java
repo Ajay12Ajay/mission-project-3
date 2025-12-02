@@ -141,7 +141,6 @@ public class MyProfileCtl extends BaseCtl {
 		// get model
 		UserModelInt model =ModelFactory.getInstance().getUserModel() ;
 		if (id > 0 || op != null) {
-			System.out.println("in id > 0  condition");
 			UserDTO dto;
 			try {
 				dto = model.findByPK(id);
