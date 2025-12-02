@@ -197,6 +197,8 @@ public class FacultyCtl extends BaseCtl {
 					if (id > 0) {
 						model.update(dto);
 						ServletUtility.setSuccessMessage("Data is successfully Update", request);
+						ServletUtility.setDto(dto, request);
+
 					} else {
 						
 						try {
@@ -212,7 +214,6 @@ public class FacultyCtl extends BaseCtl {
 						} 
 
 					}
-					ServletUtility.setDto(dto, request);
 					
 				} catch (ApplicationException e) {
 					log.error(e);

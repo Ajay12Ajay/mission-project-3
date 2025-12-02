@@ -99,6 +99,7 @@ public class RoleCtl extends BaseCtl {
 				if (id > 0) {
 					model.update(dto);
 					ServletUtility.setSuccessMessage("Successfully Updated", request);
+					ServletUtility.setDto(dto, request);
 				} else {
 					try {
 						//long pk = 
@@ -115,7 +116,7 @@ public class RoleCtl extends BaseCtl {
 
 				}
 
-				//ServletUtility.setDto(dto, request);
+				//
 
 			} catch (ApplicationException e) {
 				log.error(e);

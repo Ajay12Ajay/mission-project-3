@@ -124,8 +124,9 @@ public class SubjectCtl extends BaseCtl {
 					
 					model.update(dto);
 					ServletUtility.setSuccessMessage("Data in successfully Update", request);
+					ServletUtility.setDto(dto, request);
+
 				}else{
-					System.out.println("kkkkk+"+id);
 					long pk;
 					try{
 					pk=	model.add(dto);
@@ -140,7 +141,6 @@ public class SubjectCtl extends BaseCtl {
 					}
 
 				}
-				ServletUtility.setDto(dto, request);
 				
 			}catch (ApplicationException e) {
 				log.error(e);

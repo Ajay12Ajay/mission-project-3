@@ -166,7 +166,7 @@ public class StudentCtl extends BaseCtl {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		System.out.println("student ctl  do post start........");
+		
 		log.debug("StudentCtl Method doPost Started");
 
 		String op = DataUtility.getString(request.getParameter("operation"));
@@ -178,16 +178,16 @@ public class StudentCtl extends BaseCtl {
 		long id = DataUtility.getLong(request.getParameter("id"));
 
 		if (OP_SAVE.equalsIgnoreCase(op) || OP_UPDATE.equalsIgnoreCase(op)) {
-			System.out.println(" save operation......");
 			StudentDTO dto = (StudentDTO) populateDTO(request);
 
 			try {
 				if (id > 0) {
 					model.update(dto);
 					ServletUtility.setSuccessMessage("Data is successfully Update", request);
+					ServletUtility.setDto(dto, request);
+
 				} else {
 					try {
-						System.out.println("add dopsot");
 						model.add(dto);
 						ServletUtility.setSuccessMessage("Data is successfully saved", request);
 					} catch (ApplicationException e) {
@@ -201,7 +201,6 @@ public class StudentCtl extends BaseCtl {
 
 				}
 
-				ServletUtility.setDto(dto, request);
 
 			} catch (ApplicationException e) {
 				log.error(e);

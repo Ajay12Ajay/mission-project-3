@@ -74,11 +74,11 @@ public class UserListCtl extends BaseCtl {
 		try {
 			list = model.search(dto, pageNo, pageSize);
 
-			ArrayList<UserDTO> a = (ArrayList<UserDTO>) list;
-
-			for (UserDTO udto1 : a) {
-				System.out.println(udto1.getRoleId());
-			}
+			/*
+			 * ArrayList<UserDTO> a = (ArrayList<UserDTO>) list;
+			 * 
+			 * for (UserDTO udto1 : a) { System.out.println(udto1.getRoleId()); }
+			 */
 
 			next = model.search(dto, pageNo + 1, pageSize);
 			ServletUtility.setList(list, request);

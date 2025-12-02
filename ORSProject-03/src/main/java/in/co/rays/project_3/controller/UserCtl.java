@@ -42,15 +42,13 @@ public class UserCtl extends BaseCtl {
 		RoleModelInt model = ModelFactory.getInstance().getRoleModel();
 		try {
 			List list = model.list();
-			Iterator it = list.iterator();
-			while (it.hasNext()) {
-				RoleDTO dto = (RoleDTO) it.next();
-				System.out.println(dto.getId());
-				System.out.println(dto.getName());
-				System.out.println(dto.getDescription());
-
-			}
-
+			/*
+			 * Iterator it = list.iterator(); while (it.hasNext()) { RoleDTO dto = (RoleDTO)
+			 * it.next(); System.out.println(dto.getId());
+			 * System.out.println(dto.getName()); System.out.println(dto.getDescription());
+			 * 
+			 * }
+			 */
 			request.setAttribute("roleList", list);
 
 		} catch (Exception e) {
@@ -200,6 +198,7 @@ public class UserCtl extends BaseCtl {
 				if (id > 0) {
 					model.update(dto);
 					ServletUtility.setSuccessMessage("Data is successfully Updated", request);
+					ServletUtility.setDto(dto, request);
 				} else {
 
 					try {
@@ -215,7 +214,7 @@ public class UserCtl extends BaseCtl {
 					}
 
 				}
-			//	ServletUtility.setDto(dto, request);
+			//	
 
 			} catch (ApplicationException e) {
 				log.error(e);

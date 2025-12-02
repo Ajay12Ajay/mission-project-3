@@ -149,7 +149,7 @@ i.css {
 											</div>
 										</div>
 										<input type="text" name="productCategory" class="form-control"
-											placeholder="Enter State"
+											placeholder="Enter Category"
 											value="<%=DataUtility.getStringData(dto.getProductCategory())%>">
 									</div>
 								</div>
