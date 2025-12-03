@@ -23,7 +23,7 @@ import in.co.rays.project_3.util.ServletUtility;
 public class ProductListCtl extends BaseCtl {
 
 	private static final long serialVersionUID = 1L;
-	private static Logger log = Logger.getLogger(UserListCtl.class);
+	private static Logger log = Logger.getLogger(ProductListCtl.class);
 
 	protected void preload(HttpServletRequest request) {
 		ProductModelInt model = ModelFactory.getInstance().getProductModel();
@@ -55,7 +55,7 @@ public class ProductListCtl extends BaseCtl {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		log.debug("UserListCtl doGet Start");
+		log.debug("ProductListCtl doGet Start");
 		List list;
 		List next;
 		int pageNo = 1;
@@ -89,7 +89,7 @@ public class ProductListCtl extends BaseCtl {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		log.debug("UserListCtl doPOst End");
+		log.debug("ProductListCtl doPOst End");
 	}
 
 	/**
@@ -98,7 +98,7 @@ public class ProductListCtl extends BaseCtl {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		log.debug("UserListCtl doPost Start");
+		log.debug("ProductListCtl doPost Start");
 		List list = null;
 		List next = null;
 		int pageNo = DataUtility.getInt(request.getParameter("pageNo"));
@@ -144,7 +144,7 @@ public class ProductListCtl extends BaseCtl {
 				}
 			}
 			if (OP_BACK.equalsIgnoreCase(op)) {
-				ServletUtility.redirect(ORSView.USER_LIST_CTL, request, response);
+				ServletUtility.redirect(ORSView.PRODUCT_LIST_CTL, request, response);
 				return;
 			}
 			dto = (ProductDTO) populateDTO(request);
@@ -179,7 +179,7 @@ public class ProductListCtl extends BaseCtl {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		log.debug("UserListCtl doGet End");
+		log.debug("ProductListCtl doGet End");
 	}
 
 	@Override
