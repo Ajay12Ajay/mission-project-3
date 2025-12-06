@@ -177,11 +177,12 @@ public class MarksheetCtl extends BaseCtl {
 					dto.setId(id);
 					model.update(dto);
 					ServletUtility.setSuccessMessage("Data is successfully Updated", request);
+					ServletUtility.setDto(dto, request);
 				} else {
 					model.add(dto);
 					ServletUtility.setSuccessMessage("Data is successfully saved", request);
 				}
-				ServletUtility.setDto(dto, request);
+				//
 
 			} catch (ApplicationException e) {
 				log.error(e);

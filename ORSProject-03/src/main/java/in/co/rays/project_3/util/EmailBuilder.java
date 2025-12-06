@@ -19,8 +19,8 @@ public class EmailBuilder {
 		StringBuilder msg = new StringBuilder();
 
 		msg.append("<HTML><BODY>");
-		msg.append("Registration is successful for ORS Project SUNRAYS Technologies");
-		msg.append("<H1>Hi! Greetings from SUNRAYS Technologies!</H1>");
+		msg.append("Registration is successful for ORS Project RAYS Technologies");
+		msg.append("<H1>Hi! Greetings from RAYS Technologies!</H1>");
 		msg.append(
 				"<P>Congratulations for registering on ORS! You can now access your ORS account online - anywhere, anytime and enjoy the flexibility to check the Marksheet Details.</P>");
 		msg.append(
