@@ -9,7 +9,7 @@
 			FROM st_marksheet 
 			WHERE PHYSICS > 33 AND CHEMISTRY > 33 AND MATHS > 33 
 			ORDER BY total DESC 
-			LIMIT 0,10]]>
+			]]>
 	</queryString>
 	<field name="ROLL_NO" class="java.lang.String"/>
 	<field name="NAME" class="java.lang.String"/>
