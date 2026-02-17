@@ -176,6 +176,15 @@
                             <a class="dropdown-item" href="<%=ORSView.PRODUCT_CTL%>"><i class="fa fa-file"></i>Add Product</a>
                             <a class="dropdown-item" href="<%=ORSView.PRODUCT_LIST_CTL%>"><i class="fa fa-paste"></i>Product List</a>
                         </div></li>
+                        
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle"
+      						href="#" data-toggle="dropdown" style="color:white;">Profile</a>
+   						    <div class="dropdown-menu">
+      							  <a class="dropdown-item" href="<%=ORSView.PROFILE_CTL%>"><i class="fa fa-user-plus"></i> Add Profile</a>
+        						  <a class="dropdown-item" href="<%=ORSView.PROFILE_LIST_CTL%>"> <i class="fa fa-users"></i> Profile List</a>
+   							 </div>
+						</li>
+                        
 
                 <% } %>
 

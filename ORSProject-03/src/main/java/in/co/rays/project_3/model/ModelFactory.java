@@ -177,4 +177,25 @@ public final class ModelFactory {
 
 		return facultyModel;
 	}
+
+	public ProfileModelInt getProfileModel() {
+
+		ProfileModelInt profileModel = (ProfileModelInt) modelCache.get("profileModel");
+
+		if (profileModel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				profileModel = new ProfileModelHibImpl();
+			}
+
+			if ("JDBC".equals(DATABASE)) {
+				profileModel = new ProfileModelHibImpl();
+			}
+
+			modelCache.put("profileModel", profileModel);
+		}
+
+		return profileModel;
+	}
+
 }
