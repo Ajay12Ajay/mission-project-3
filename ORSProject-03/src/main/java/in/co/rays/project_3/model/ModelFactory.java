@@ -198,4 +198,44 @@ public final class ModelFactory {
 		return profileModel;
 	}
 
+	public ContactModelInt getContactModel() {
+
+		ContactModelInt contactModel = (ContactModelInt) modelCache.get("contactModel");
+
+		if (contactModel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				contactModel = new ContactModelHibImpl();
+			}
+
+			if ("JDBC".equals(DATABASE)) {
+				contactModel = new ContactModelHibImpl();
+			}
+
+			modelCache.put("contactModel", contactModel);
+		}
+
+		return contactModel;
+	}
+
+	public AttendanceModelInt getAttendanceModel() {
+
+		AttendanceModelInt attendanceModel = (AttendanceModelInt) modelCache.get("attendanceModel");
+
+		if (attendanceModel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				attendanceModel = new AttendanceModelHibImpl();
+			}
+
+			if ("JDBC".equals(DATABASE)) {
+				attendanceModel = new AttendanceModelHibImpl();
+			}
+
+			modelCache.put("attendanceModel", attendanceModel);
+		}
+
+		return attendanceModel;
+	}
+
 }

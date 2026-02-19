@@ -184,6 +184,24 @@
         						  <a class="dropdown-item" href="<%=ORSView.PROFILE_LIST_CTL%>"> <i class="fa fa-users"></i> Profile List</a>
    							 </div>
 						</li>
+						
+						<li class="nav-item dropdown"><a class="nav-link dropdown-toggle"
+       					    href="#" data-toggle="dropdown" style="color:white;">Contact</a>
+ 						   <div class="dropdown-menu">
+       						    <a class="dropdown-item" href="<%=ORSView.CONTACT_CTL%>"><i class="fa fa-address-book"></i> Add Contact</a>
+								<a class="dropdown-item" href="<%=ORSView.CONTACT_LIST_CTL%>"><i class="fa fa-list"></i> Contact List </a>
+   						   </div>
+						</li>
+						
+						<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" 
+						    href="#" data-toggle="dropdown" style="color:white;">Attendance</a>
+    						<div class="dropdown-menu">
+       							 <a class="dropdown-item" href="<%=ORSView.ATTENDANCE_CTL%>"><i class="fa fa-user-check"></i> Add Attendance</a>
+       							 <a class="dropdown-item" href="<%=ORSView.ATTENDANCE_LIST_CTL%>"><i class="fa fa-calendar-check"></i> Attendance List</a>
+    						</div>
+						</li>
+						
+						
                         
 
                 <% } %>
