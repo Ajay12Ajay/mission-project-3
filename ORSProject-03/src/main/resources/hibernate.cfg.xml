@@ -58,5 +58,7 @@
 			resource="in/co/rays/project_3/hbm/ContactDTO.hbm.xml" />
 		<mapping
 			resource="in/co/rays/project_3/hbm/AttendanceDTO.hbm.xml" />
+			<mapping
+			resource="in/co/rays/project_3/hbm/CertificateDTO.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>

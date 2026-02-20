@@ -238,4 +238,24 @@ public final class ModelFactory {
 		return attendanceModel;
 	}
 
+	public CertificateModelInt getCertificateModel() {
+
+		CertificateModelInt certificateModel = (CertificateModelInt) modelCache.get("certificateModel");
+
+		if (certificateModel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				certificateModel = new CertificateModelHibImpl();
+			}
+
+			if ("JDBC".equals(DATABASE)) {
+				certificateModel = new CertificateModelHibImpl();
+			}
+
+			modelCache.put("certificateModel", certificateModel);
+		}
+
+		return certificateModel;
+	}
+
 }

@@ -108,6 +108,13 @@ public interface ORSView {
 
 	public String ATTENDANCE_LIST_CTL =
 			APP_CONTEXT + "/ctl/AttendanceListCtl";
+	
+	
+	public static final String CERTIFICATE_CTL = APP_CONTEXT + "/ctl/CertificateCtl";
+	public static final String CERTIFICATE_LIST_CTL = APP_CONTEXT + "/ctl/CertificateListCtl";
+
+	public static final String CERTIFICATE_VIEW = "/jsp/CertificateView.jsp";
+	public static final String CERTIFICATE_LIST_VIEW = "/jsp/CertificateListView.jsp";
 
 
 

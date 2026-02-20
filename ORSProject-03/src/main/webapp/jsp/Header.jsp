@@ -201,6 +201,14 @@
     						</div>
 						</li>
 						
+						<li class="nav-item dropdown"><a class="nav-link dropdown-toggle"
+        					href="#" data-toggle="dropdown" style="color:white;">Certificate</a>
+    						<div class="dropdown-menu">
+        						 <a class="dropdown-item"href="<%=ORSView.CERTIFICATE_CTL%>"> <i class="fa fa-certificate"></i> Add Certificate</a>
+       							 <a class="dropdown-item"href="<%=ORSView.CERTIFICATE_LIST_CTL%>"> <i class="fa fa-list"></i> Certificate List</a>
+       							  </div>
+</li>
+						
 						
                         
 
