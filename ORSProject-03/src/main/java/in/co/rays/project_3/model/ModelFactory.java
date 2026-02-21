@@ -257,5 +257,27 @@ public final class ModelFactory {
 
 		return certificateModel;
 	}
+	
+	
+	public VisitorModelInt getVisitorModel() {
+
+	    VisitorModelInt visitorModel = 
+	        (VisitorModelInt) modelCache.get("visitorModel");
+
+	    if (visitorModel == null) {
+
+	        if ("Hibernate".equals(DATABASE)) {
+	            visitorModel = new VisitorModelHibImpl();
+	        }
+
+	        if ("JDBC".equals(DATABASE)) {
+	            visitorModel = new VisitorModelHibImpl();
+	        }
+
+	        modelCache.put("visitorModel", visitorModel);
+	    }
+
+	    return visitorModel;
+	}
 
 }

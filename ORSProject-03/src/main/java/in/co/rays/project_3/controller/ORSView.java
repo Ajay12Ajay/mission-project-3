@@ -16,9 +16,8 @@ public interface ORSView {
 	public String ERROR_VIEW = PAGE_FOLDER + "/ErrorView404.jsp";
 
 	public String MARKSHEET_VIEW = PAGE_FOLDER + "/MarksheetView.jsp";
-	
-	public String JASPER_CTL = APP_CONTEXT + "/ctl/JasperCtl";
 
+	public String JASPER_CTL = APP_CONTEXT + "/ctl/JasperCtl";
 
 	public String MARKSHEET_LIST_VIEW = PAGE_FOLDER + "/MarksheetListView.jsp";
 	public String GET_MARKSHEET_VIEW = PAGE_FOLDER + "/GetMarksheetView.jsp";
@@ -48,7 +47,6 @@ public interface ORSView {
 	public String SUBJECT_LIST_VIEW = PAGE_FOLDER + "/SubjectListView.jsp";
 	public String PRODUCT_VIEW = PAGE_FOLDER + "/ProductView.jsp";
 	public String PRODUCT_LIST_VIEW = PAGE_FOLDER + "/ProductListView.jsp";
-
 
 	public String ERROR_CTL = APP_CONTEXT + "/ErrorCtl";
 
@@ -82,42 +80,36 @@ public interface ORSView {
 	public String MY_PROFILE_CTL = APP_CONTEXT + "/ctl/MyProfileCtl";
 	public String FORGET_PASSWORD_CTL = APP_CONTEXT + "/ForgetPasswordCtl";
 	public String MARKSHEET_MERIT_LIST_CTL = APP_CONTEXT + "/ctl/MarksheetMeritListCtl";
-	
+
 	public String PROFILE_VIEW = PAGE_FOLDER + "/ProfileView.jsp";
 	public String PROFILE_LIST_VIEW = PAGE_FOLDER + "/ProfileListView.jsp";
-	
+
 	public String PROFILE_CTL = APP_CONTEXT + "/ctl/ProfileCtl";
 	public String PROFILE_LIST_CTL = APP_CONTEXT + "/ctl/ProfileListCtl";
-	
-	
+
 	public String CONTACT_VIEW = PAGE_FOLDER + "/ContactView.jsp";
 	public String CONTACT_LIST_VIEW = PAGE_FOLDER + "/ContactListView.jsp";
 
 	public String CONTACT_CTL = APP_CONTEXT + "/ctl/ContactCtl";
 	public String CONTACT_LIST_CTL = APP_CONTEXT + "/ctl/ContactListCtl";
-	
-	
-	public String ATTENDANCE_VIEW =
-			PAGE_FOLDER + "/AttendanceView.jsp";
 
-	public String ATTENDANCE_LIST_VIEW =
-			PAGE_FOLDER + "/AttendanceListView.jsp";
+	public String ATTENDANCE_VIEW = PAGE_FOLDER + "/AttendanceView.jsp";
 
-	public String ATTENDANCE_CTL =
-			APP_CONTEXT + "/ctl/AttendanceCtl";
+	public String ATTENDANCE_LIST_VIEW = PAGE_FOLDER + "/AttendanceListView.jsp";
 
-	public String ATTENDANCE_LIST_CTL =
-			APP_CONTEXT + "/ctl/AttendanceListCtl";
-	
-	
+	public String ATTENDANCE_CTL = APP_CONTEXT + "/ctl/AttendanceCtl";
+
+	public String ATTENDANCE_LIST_CTL = APP_CONTEXT + "/ctl/AttendanceListCtl";
+
 	public static final String CERTIFICATE_CTL = APP_CONTEXT + "/ctl/CertificateCtl";
 	public static final String CERTIFICATE_LIST_CTL = APP_CONTEXT + "/ctl/CertificateListCtl";
 
 	public static final String CERTIFICATE_VIEW = "/jsp/CertificateView.jsp";
 	public static final String CERTIFICATE_LIST_VIEW = "/jsp/CertificateListView.jsp";
 
-
-
-
+	public static final String VISITOR_CTL = APP_CONTEXT + "/ctl/VisitorCtl";
+	public static final String VISITOR_LIST_CTL = APP_CONTEXT + "/ctl/VisitorListCtl";
+	public static final String VISITOR_VIEW = "/jsp/VisitorView.jsp";
+	public static final String VISITOR_LIST_VIEW = "/jsp/VisitorListView.jsp";
 
 }
