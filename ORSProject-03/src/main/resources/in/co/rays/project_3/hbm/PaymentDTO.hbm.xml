@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="in.co.rays.project_3.dto">
+
+	<class name="PaymentDTO" table="ST_PAYMENT">
+
+		<!-- Primary Key -->
+		<id name="id" type="java.lang.Long">
+			<column name="ID" />
+			<generator class="increment" />
+		</id>
+
+		<!-- Payment Code -->
+		<property name="paymentCode" type="java.lang.String">
+			<column name="PAYMENT_CODE" />
+		</property>
+
+		<!-- Amount -->
+		<property name="amount" type="java.lang.Double">
+			<column name="AMOUNT" />
+		</property>
+
+		<!-- Payment Method -->
+		<property name="paymentMethod" type="java.lang.String">
+			<column name="PAYMENT_METHOD" />
+		</property>
+
+		<!-- Payment Date -->
+		<property name="paymentDate" type="java.util.Date">
+			<column name="PAYMENT_DATE" />
+		</property>
+
+		<!-- Payment Status -->
+		<property name="paymentStatus" type="java.lang.String">
+			<column name="PAYMENT_STATUS" />
+		</property>
+
+		<!-- BaseDTO Fields -->
+
+		<property name="createdBy" type="java.lang.String"
+			length="50">
+			<column name="CREATED_BY" />
+		</property>
+
+		<property name="modifiedBy" type="java.lang.String"
+			length="50">
+			<column name="MODIFIED_BY" />
+		</property>
+
+		<property name="createdDatetime" type="java.sql.Timestamp">
+			<column name="CREATED_DATETIME" />
+		</property>
+
+		<property name="modifiedDatetime" type="java.sql.Timestamp">
+			<column name="MODIFIED_DATETIME" />
+		</property>
+
+	</class>
+
+</hibernate-mapping>

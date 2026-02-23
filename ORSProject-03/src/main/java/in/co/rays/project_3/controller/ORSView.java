@@ -111,5 +111,11 @@ public interface ORSView {
 	public static final String VISITOR_LIST_CTL = APP_CONTEXT + "/ctl/VisitorListCtl";
 	public static final String VISITOR_VIEW = "/jsp/VisitorView.jsp";
 	public static final String VISITOR_LIST_VIEW = "/jsp/VisitorListView.jsp";
+	
+	
+	public static final String PAYMENT_CTL = APP_CONTEXT + "/ctl/PaymentCtl";	
+	public static final String PAYMENT_LIST_CTL = APP_CONTEXT + "/ctl/PaymentListCtl";	
+	public static final String PAYMENT_VIEW = "/jsp/PaymentView.jsp";	
+	public static final String PAYMENT_LIST_VIEW = "/jsp/PaymentListView.jsp";
 
 }

@@ -279,5 +279,26 @@ public final class ModelFactory {
 
 	    return visitorModel;
 	}
+	
+	public PaymentModelInt getPaymentModel() {
+
+	    PaymentModelInt paymentModel =
+	        (PaymentModelInt) modelCache.get("paymentModel");
+
+	    if (paymentModel == null) {
+
+	        if ("Hibernate".equals(DATABASE)) {
+	            paymentModel = new PaymentModelHibImpl();
+	        }
+
+	        if ("JDBC".equals(DATABASE)) {
+	            paymentModel = new PaymentModelHibImpl();
+	        }
+
+	        modelCache.put("paymentModel", paymentModel);
+	    }
+
+	    return paymentModel;
+	}
 
 }

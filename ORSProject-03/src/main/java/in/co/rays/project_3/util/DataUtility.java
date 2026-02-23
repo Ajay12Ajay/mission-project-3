@@ -193,4 +193,16 @@ public class DataUtility {
 			return 0;
 		}
 	}
+
+	public static Double getDouble(String val) {
+
+		if (DataValidator.isNotNull(val)) {
+			try {
+				return Double.parseDouble(val);
+			} catch (Exception e) {
+				return 0.0;
+			}
+		}
+		return 0.0;
+	}
 }

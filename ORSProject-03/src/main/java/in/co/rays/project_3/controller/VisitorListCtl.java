@@ -27,7 +27,7 @@ public class VisitorListCtl extends BaseCtl {
 	private static Logger log = Logger.getLogger(VisitorListCtl.class);
 
 	/**
-	 * 🔥 Preload Method
+	 *  Preload Method
 	 */
 	protected void preload(HttpServletRequest request) {
 
