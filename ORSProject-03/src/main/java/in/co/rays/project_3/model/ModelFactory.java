@@ -257,48 +257,86 @@ public final class ModelFactory {
 
 		return certificateModel;
 	}
-	
-	
+
 	public VisitorModelInt getVisitorModel() {
 
-	    VisitorModelInt visitorModel = 
-	        (VisitorModelInt) modelCache.get("visitorModel");
+		VisitorModelInt visitorModel = (VisitorModelInt) modelCache.get("visitorModel");
 
-	    if (visitorModel == null) {
+		if (visitorModel == null) {
 
-	        if ("Hibernate".equals(DATABASE)) {
-	            visitorModel = new VisitorModelHibImpl();
-	        }
+			if ("Hibernate".equals(DATABASE)) {
+				visitorModel = new VisitorModelHibImpl();
+			}
 
-	        if ("JDBC".equals(DATABASE)) {
-	            visitorModel = new VisitorModelHibImpl();
-	        }
+			if ("JDBC".equals(DATABASE)) {
+				visitorModel = new VisitorModelHibImpl();
+			}
 
-	        modelCache.put("visitorModel", visitorModel);
-	    }
+			modelCache.put("visitorModel", visitorModel);
+		}
 
-	    return visitorModel;
+		return visitorModel;
 	}
-	
+
 	public PaymentModelInt getPaymentModel() {
 
-	    PaymentModelInt paymentModel =
-	        (PaymentModelInt) modelCache.get("paymentModel");
+		PaymentModelInt paymentModel = (PaymentModelInt) modelCache.get("paymentModel");
 
-	    if (paymentModel == null) {
+		if (paymentModel == null) {
 
-	        if ("Hibernate".equals(DATABASE)) {
-	            paymentModel = new PaymentModelHibImpl();
-	        }
+			if ("Hibernate".equals(DATABASE)) {
+				paymentModel = new PaymentModelHibImpl();
+			}
 
-	        if ("JDBC".equals(DATABASE)) {
-	            paymentModel = new PaymentModelHibImpl();
-	        }
+			if ("JDBC".equals(DATABASE)) {
+				paymentModel = new PaymentModelHibImpl();
+			}
 
-	        modelCache.put("paymentModel", paymentModel);
-	    }
+			modelCache.put("paymentModel", paymentModel);
+		}
 
-	    return paymentModel;
+		return paymentModel;
+	}
+
+	public EventModelInt getEventModel() {
+
+		EventModelInt eventModel = (EventModelInt) modelCache.get("eventModel");
+
+		if (eventModel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				eventModel = new EventModelHibImpl();
+			}
+
+			if ("JDBC".equals(DATABASE)) {
+				eventModel = new EventModelHibImpl();
+			}
+
+			modelCache.put("eventModel", eventModel);
+		}
+
+		return eventModel;
+	}
+
+	public IssueBookModelInt getIssueBookModel() {
+
+		IssueBookModelInt issueBookModel = (IssueBookModelInt) modelCache.get("issueBookModel");
+
+		if (issueBookModel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				issueBookModel = new IssueBookModelHibImpl();
+			}
+
+			if ("JDBC".equals(DATABASE)) {
+				issueBookModel = new IssueBookModelHibImpl();
+				
+			}
+
+			modelCache.put("issueBookModel", issueBookModel);
+		}
+
+		return issueBookModel;
 	}
 
 }

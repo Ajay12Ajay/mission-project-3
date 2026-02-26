@@ -111,11 +111,20 @@ public interface ORSView {
 	public static final String VISITOR_LIST_CTL = APP_CONTEXT + "/ctl/VisitorListCtl";
 	public static final String VISITOR_VIEW = "/jsp/VisitorView.jsp";
 	public static final String VISITOR_LIST_VIEW = "/jsp/VisitorListView.jsp";
-	
-	
-	public static final String PAYMENT_CTL = APP_CONTEXT + "/ctl/PaymentCtl";	
-	public static final String PAYMENT_LIST_CTL = APP_CONTEXT + "/ctl/PaymentListCtl";	
-	public static final String PAYMENT_VIEW = "/jsp/PaymentView.jsp";	
+
+	public static final String PAYMENT_CTL = APP_CONTEXT + "/ctl/PaymentCtl";
+	public static final String PAYMENT_LIST_CTL = APP_CONTEXT + "/ctl/PaymentListCtl";
+	public static final String PAYMENT_VIEW = "/jsp/PaymentView.jsp";
 	public static final String PAYMENT_LIST_VIEW = "/jsp/PaymentListView.jsp";
+
+	public static final String EVENT_CTL = APP_CONTEXT + "/ctl/EventCtl";
+	public static final String EVENT_LIST_CTL = APP_CONTEXT + "/ctl/EventListCtl";
+	public static final String EVENT_VIEW = "/jsp/EventView.jsp";
+	public static final String EVENT_LIST_VIEW = "/jsp/EventListView.jsp";
+
+	public static final String ISSUEBOOK_VIEW = "/jsp/IssueBookView.jsp";
+	public static final String ISSUEBOOK_LIST_VIEW = "/jsp/IssueBookListView.jsp";
+	public static final String ISSUEBOOK_CTL = APP_CONTEXT + "/ctl/IssueBookCtl";
+	public static final String ISSUEBOOK_LIST_CTL = APP_CONTEXT + "/ctl/IssueBookListCtl";
 
 }

@@ -179,6 +179,8 @@
                             <a class="dropdown-item" href="<%=ORSView.PRODUCT_LIST_CTL%>"><i class="fa fa-paste"></i>Product List</a>
                         </div></li>
                         
+                        <br>
+                        
                         <li class="nav-item dropdown"><a class="nav-link dropdown-toggle"
       						href="#" data-toggle="dropdown" style="color:white;">Profile</a>
    						    <div class="dropdown-menu">
@@ -226,6 +228,22 @@
      						   <a class="dropdown-item" href="<%=ORSView.PAYMENT_CTL%>"><i class="fa fa-credit-card"></i> Add Payment </a>
 				              <a class="dropdown-item"  href="<%=ORSView.PAYMENT_LIST_CTL%>"><i class="fa fa-list"></i> Payment List  </a>
   					    </div>
+					</li>
+					
+					<li class="nav-item dropdown"><a class="nav-link dropdown-toggle"
+     					href="#" data-toggle="dropdown" style="color:white;">Event </a>
+    					<div class="dropdown-menu">
+      						  <a class="dropdown-item" href="<%=ORSView.EVENT_CTL%>"><i class="fa fa-calendar-plus"></i> Add Event </a>
+					          <a class="dropdown-item" href="<%=ORSView.EVENT_LIST_CTL%>"><i class="fa fa-calendar"></i> Event List</a>
+  					    </div>
+					</li>
+					
+					<li class="nav-item dropdown"><a class="nav-link dropdown-toggle"
+						href="#" data-toggle="dropdown"	style="color:white;">Issue Book</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="<%=ORSView.ISSUEBOOK_CTL%>"><i class="fa fa-book"></i> Add Issue Book </a>
+							<a class="dropdown-item" href="<%=ORSView.ISSUEBOOK_LIST_CTL%>"><i class="fa fa-list"></i> Issue Book List</a>
+						</div>
 					</li>
 						
                         

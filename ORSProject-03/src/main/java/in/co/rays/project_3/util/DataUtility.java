@@ -205,4 +205,24 @@ public class DataUtility {
 		}
 		return 0.0;
 	}
+	
+	/**
+	 * Converts Date into formatted String
+	 * 
+	 * @param date
+	 * @return formatted date string
+	 */
+	public static String getString(Date date) {
+
+		if (date != null) {
+			try {
+				return formatter.format(date);
+			} catch (Exception e) {
+				return "";
+			}
+		}
+		return "";
+	}
+	
+
 }

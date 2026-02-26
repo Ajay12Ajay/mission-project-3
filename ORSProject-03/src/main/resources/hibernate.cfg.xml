@@ -64,5 +64,8 @@
 			resource="in/co/rays/project_3/hbm/VisitorDTO.hbm.xml" />
 		<mapping
 			resource="in/co/rays/project_3/hbm/PaymentDTO.hbm.xml" />
+		<mapping resource="in/co/rays/project_3/hbm/EventDTO.hbm.xml" />
+		<mapping
+			resource="in/co/rays/project_3/hbm/IssueBookDTO.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>
